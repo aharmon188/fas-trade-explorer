@@ -195,7 +195,7 @@ let resetExplorer: () => void = () => {};
 if (clientId) {
   esriId.registerOAuthInfos([new OAuthInfo({
     appId: clientId, portalUrl: PORTAL, popup: true,
-    popupCallbackUrl: `${location.origin}/oauth-callback.html`
+    popupCallbackUrl: new URL(`${import.meta.env.BASE_URL}oauth-callback.html`, location.origin).href
   })]);
 }
 
@@ -248,7 +248,7 @@ function mountAgent(data: Dataset) {
 }
 
 async function loadLocal(): Promise<Dataset> {
-  const response = await fetch("/prototype-data.json");
+  const response = await fetch(`${import.meta.env.BASE_URL}prototype-data.json`);
   if (!response.ok) throw new Error("Pilot missing. Run tools\\Invoke-FasPilot.ps1.");
   return response.json();
 }
@@ -538,7 +538,7 @@ async function start() {
   ]);
   render();
   try {
-    const boundaries = new GeoJSONLayer({ url: "/partner-boundaries.geojson" });
+    const boundaries = new GeoJSONLayer({ url: `${import.meta.env.BASE_URL}partner-boundaries.geojson` });
     const query = boundaries.createQuery();
     query.where = `ISO IN (${data.partners.map(p => `'${p.iso}'`).join(",")})`;
     query.outFields = ["ISO", "COUNTRY"]; query.returnGeometry = true;

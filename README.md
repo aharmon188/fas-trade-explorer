@@ -5,7 +5,23 @@ query state make the saved FAS sample useful. It is not production software.
 Organizational authentication and a validated calculation assistant are available.
 Worldwide rankings and scheduled ingestion are not implemented.
 
-## Run
+## Live website
+
+GitHub Pages publishes this explorer at
+https://aharmon188.github.io/fas-trade-explorer/.
+Pushing to `main` runs the Node tests, builds, and deploys through
+[deploy.yml](.github/workflows/deploy.yml). The site and bundled data are public.
+CSV downloads are currently public too; assistant sign-in is separate.
+
+The build uses repository variables `VITE_ARCGIS_CLIENT_ID` and
+`VITE_FAS_WEBMAP_ID`. These are public application/item identifiers, not secrets.
+Never put API keys, passwords or client secrets in Vite build variables.
+The ArcGIS OAuth app must allow the exact production callback
+`https://aharmon188.github.io/fas-trade-explorer/oauth-callback.html`
+in addition to any approved localhost callbacks. Deploying the website does not
+change ArcGIS sharing, app permissions, or usage limits.
+
+## Local development
 
 ```powershell
 npm ci
