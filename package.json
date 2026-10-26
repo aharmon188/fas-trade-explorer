@@ -1,0 +1,23 @@
+{
+  "name": "fas-trade-prototype",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "prototype": "vite --host localhost",
+    "test": "node --test tests/*.test.mjs",
+    "build": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "@arcgis/ai-components": "^5.1.27",
+    "@arcgis/core": "^5.1.27",
+    "@arcgis/map-components": "~5.1.27",
+    "@esri/calcite-components": "^5.2.0",
+    "@langchain/core": "^1.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0"
+  }
+}

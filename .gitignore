@@ -1,0 +1,19 @@
+# Local credentials and environment files must never enter source control.
+.env
+.env.*
+*.clixml
+node_modules/
+dist/
+__pycache__/
+
+# Workspace-only agent packages and local session handoff.
+.agents/
+skills-lock.json
+HANDOFF.md
+tools/Restore-FasRefreshSnapshot.py
+
+# Local credential exports and private keys.
+*.pem
+*.key
+*.pfx
+*.p12

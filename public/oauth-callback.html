@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Signing in…</title></head>
+<body>
+<script>
+  // Hand the OAuth result to the opener (the SDK listens for this event), then close the popup.
+  if (window.opener) {
+    var hash = location.hash;
+    window.opener.dispatchEvent(new CustomEvent(hash ? "arcgis:auth:hash" : "arcgis:auth:location:search",
+      { detail: hash || location.search }));
+  }
+  window.close();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  { "code": "CA", "name": "Canada", "iso": "CA" },
+  { "code": "MX", "name": "Mexico", "iso": "MX" },
+  { "code": "BR", "name": "Brazil", "iso": "BR" },
+  { "code": "JA", "name": "Japan", "iso": "JP" },
+  { "code": "CH", "name": "China", "iso": "CN" },
+  { "code": "KS", "name": "Korea, South", "iso": "KR" },
+  { "code": "TW", "name": "Taiwan", "iso": "TW" },
+  { "code": "VM", "name": "Vietnam", "iso": "VN" },
+  { "code": "IN", "name": "India", "iso": "IN" },
+  { "code": "ID", "name": "Indonesia", "iso": "ID" },
+  { "code": "TH", "name": "Thailand", "iso": "TH" },
+  { "code": "A2", "name": "Australia", "iso": "AU" },
+  { "code": "UK", "name": "United Kingdom", "iso": "GB" },
+  { "code": "GM", "name": "Germany", "iso": "DE" },
+  { "code": "NL", "name": "Netherlands", "iso": "NL" },
+  { "code": "F1", "name": "France", "iso": "FR" },
+  { "code": "I1", "name": "Italy", "iso": "IT" },
+  { "code": "SP", "name": "Spain", "iso": "ES" },
+  { "code": "CO", "name": "Colombia", "iso": "CO" },
+  { "code": "CI", "name": "Chile", "iso": "CL" }
+]
